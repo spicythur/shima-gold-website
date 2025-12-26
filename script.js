@@ -25,7 +25,7 @@ document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in').forE
 });
 
 // ===== NAVBAR SCROLL EFFECT =====
-const navbar = document.getElementById('navbar');
+const navbar = document.querySelector('header');
 window.addEventListener('scroll', function () {
     if (window.scrollY > 100) {
         navbar.classList.add('scrolled');
