@@ -658,6 +658,7 @@ header.scrolled {
 }
 
 .product-info h3 {
+    font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: #0a4a8a;
@@ -666,6 +667,7 @@ header.scrolled {
 }
 
 .product-info p {
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     line-height: 1.6;
     color: #333;
@@ -902,9 +904,142 @@ header.scrolled {
     }
 }
 
-/* Footer */
+/* Footer Redesign */
 .footer {
-    background: #00417D;
+    background: linear-gradient(135deg, #0a4a8a 0%, #1e5ba8 100%);
+    color: #e0e0e0;
+    padding: 60px 0 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-brand {
+    margin-bottom: 40px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo-img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-text h2 {
+    color: #d4af37;
+    /* Gold color */
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.footer-content-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-column address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.map-link {
+    color: #d4af37;
+    text-decoration: underline;
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #cccccc;
+    margin: 5px 0;
+}
+
+.contact-info strong {
+    color: #ffffff;
+}
+
+.ecommerce-links,
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.ecommerce-links li,
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.ecommerce-links a,
+.social-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.ecommerce-links a:hover,
+.social-links a:hover {
+    color: #d4af37;
+}
+
+.icon-shopee,
+.icon-tokopedia {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.icon-shopee {
+    background: #ee4d2d;
+    color: white;
+}
+
+.icon-tokopedia {
+    background: #42b549;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
 }
 
 /* Newsletter Section */
@@ -951,84 +1086,6 @@ header.scrolled {
     text-decoration: underline;
 }
 
-/* Footer Main */
-.footer-main {
-    padding: 60px 50px 40px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.footer-logo {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #0a4a8a 0%, #1e5ba8 100%);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-.footer-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.footer-tagline {
-    font-size: 15px;
-    color: #fff;
-    margin: 0;
-    line-height: 1.5;
-}
-
-.footer-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.footer-column h4 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0 0 20px 0;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 12px;
-}
-
-.footer-column ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.3s ease;
-}
-
-.footer-column ul li a:hover {
-    color: #0a4a8a;
-}
-
 /* Responsive Footer */
 @media (max-width: 968px) {
     .newsletter-section {
@@ -1049,22 +1106,13 @@ header.scrolled {
         flex-direction: column;
     }
 
-    .footer-content {
-        grid-template-columns: 1fr;
+    .footer-content-grid {
+        grid-template-columns: 1fr 1fr;
         gap: 40px;
-    }
-
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .footer-main {
-        padding: 40px 30px 30px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .newsletter-section {
         margin: 20px;
         padding: 30px 20px;
@@ -1074,8 +1122,10 @@ header.scrolled {
         font-size: 28px;
     }
 
-    .footer-links {
+    .footer-content-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
     }
+}
+
 }
